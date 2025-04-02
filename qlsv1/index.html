@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý sinh viên</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Quản lý sinh viên</h1>
+
+        <div class="form-container">
+            <h2>Thêm sinh viên mới</h2>
+            <div class="input-group">
+                <label for="name">Tên:</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="input-group">
+                <label for="hometown">Quê quán:</label>
+                <input type="text" id="hometown" required>
+            </div>
+            <div class="input-group">
+                <label for="birthdate">Ngày sinh:</label>
+                <input type="date" id="birthdate" required>
+            </div>
+            <button onclick="addStudent()">Thêm sinh viên</button>
+        </div>
+
+        <div class="search-container">
+            <h2>Tìm kiếm</h2>
+            <div class="input-group">
+                <label for="searchName">Tìm theo tên:</label>
+                <input type="text" id="searchName" placeholder="Nhập tên cần tìm...">
+                <button onclick="searchByName()">Tìm theo tên</button>
+            </div>
+            <div class="input-group">
+                <label for="searchHometown">Tìm theo quê quán:</label>
+                <input type="text" id="searchHometown" placeholder="Nhập quê quán cần tìm...">
+                <button onclick="searchByHometown()">Tìm theo quê</button>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button onclick="sortByAge()">Sắp xếp theo tuổi</button>
+            <button onclick="showInputOrder()">Hiển thị theo thứ tự nhập</button>
+        </div>
+
+        <div class="student-list">
+            <h2>Danh sách sinh viên</h2>
+            <table id="studentTable">
+                <thead>
+                    <tr>
+                        <th>Tên</th>
+                        <th>Quê quán</th>
+                        <th>Ngày sinh</th>
+                        <th>Tuổi</th>
+                    </tr>
+                </thead>
+                <tbody id="studentList">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
