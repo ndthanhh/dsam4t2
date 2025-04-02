@@ -10,7 +10,17 @@
 
 <body>
     <div class="container">
-        <h1>Quản lý sinh viên</h1>
+        <header class="header">
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="./images.png" alt="PTIT Logo" class="ptit-logo">
+                </div>
+                <div class="group-logo">
+                    <h2>Nhóm 10</h2>
+                </div>
+            </div>
+            <h1>Quản lý sinh viên</h1>
+        </header>
 
         <div class="form-container">
             <h2>Thêm sinh viên mới</h2>
@@ -66,16 +76,15 @@
         <div class="student-list">
             <h2>Danh sách sinh viên</h2>
             <table id="studentTable">
-                <!-- thẻ table để tạo bảng -->
-                <thead> <!--phần đầu bảng thường chứa tiêu đề cộtcột-->
-                    <tr> <!--một dòng trong bảngbảng-->
-                        <th>Tên</th> <!--ô tiêu đề-->
+                <thead>
+                    <tr>
+                        <th>Tên</th>
                         <th>Quê quán</th>
                         <th>Ngày sinh</th>
                         <th>Tuổi</th>
                     </tr>
                 </thead>
-                <tbody id="studentList"> <!--thân bảng chứa dữ liệu của mỗi dòng-->
+                <tbody id="studentList">
                 </tbody>
             </table>
         </div>
