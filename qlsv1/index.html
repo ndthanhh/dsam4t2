@@ -41,6 +41,21 @@
                 <input type="text" id="searchHometown" placeholder="Nhập quê quán cần tìm...">
                 <button onclick="searchByHometown()">Tìm theo quê</button>
             </div>
+            <div class="search-results" id="searchResults">
+                <h3>Kết quả tìm kiếm</h3>
+                <table id="searchResultTable">
+                    <thead>
+                        <tr>
+                            <th>Tên</th>
+                            <th>Quê quán</th>
+                            <th>Ngày sinh</th>
+                            <th>Tuổi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="searchResultList">
+                    </tbody>
+                </table>
+            </div>
         </div>
 
         <div class="actions">
