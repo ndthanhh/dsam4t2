@@ -88,8 +88,14 @@ function searchByHometown() {
 
 // Hàm sắp xếp danh sách theo tuổi
 function sortByAge() {
-    // Sử dụng hàm sort với comparator để sắp xếp theo tuổi
-    students.sort((a, b) => a.age - b.age);
+    // Sắp xếp theo tuổi từ lớn đến nhỏ, nếu tuổi bằng nhau thì sắp xếp theo ngày sinh
+    students.sort((a, b) => {
+        if (a.age !== b.age) {
+            return b.age - a.age; // Đảo ngược thứ tự sắp xếp tuổi
+        }
+        // Nếu tuổi bằng nhau, sắp xếp theo ngày sinh (người sinh trước xếp trước)
+        return new Date(a.birthdate) - new Date(b.birthdate);
+    });
     // Cập nhật danh sách hiển thị
     updateStudentList();
 }
